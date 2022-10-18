@@ -1,0 +1,75 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "settings": {
+        "react": {
+            "version": "latest"
+        },
+        "import/resolver": {
+            "node": {
+                "moduleDirectory": ["node_modules", "src/"],
+                "paths": [ "src" ],
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        }
+    },
+    "extends": [
+        "plugin:prettier/recommended",
+        "plugin:import/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "prettier",
+        "import"
+    ],
+    "rules": {
+        "import/no-default-export": "warn",
+        "import/order": ["error", {
+            "pathGroups": [
+                {
+                    "pattern": "~/**",
+                    "group": "external"
+                }
+            ]
+        }],
+        "no-tabs": 2,
+        "prettier/prettier": [2, {
+            "indent": ["error", 2, { "SwitchCase": 1}],
+            "endOfLine": "auto",
+            "jsxSingleQuote": true,
+            "useTabs": false,
+            "parser": "flow",
+            "singleQuote": true
+          }
+        ],
+        "max-len": ["error", {"code": 120}],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "react/sort-prop-types": ["error", {
+              "callbacksLast": true,
+              "ignoreCase": false,
+              "requiredFirst": true,
+              "sortShapeProp": true,
+              "noSortAlphabetically": false
+            }
+        ]
+    }
+}
