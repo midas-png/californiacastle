@@ -5,13 +5,14 @@ const theme = {
   colors: {
     primary: '#fff',
     secondary: '#121212',
+    tertiary: '#dbdbdb',
   },
-  boxShadows: {
-    primary: '0px 0px 15px 0px #0000001a',
+  boxShadow: {
+    primary: '0px 4px 20px 10px #0000001a',
     secondary: '0px 4px 20px 0px #0000000d',
   },
   fontFamily: {
-    primary: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+    primary: '"Rubik", sans-serif',
     secondary: '"Cormorant Garamond", serif',
   },
   fontSize: {

@@ -1,10 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
-import { MainPage } from 'pages';
+import { MainPage, AssistancePage, ContactsPage, LocationsPage } from 'pages';
 
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path='/' element={<MainPage />} />
+      <Route path='/californiacastle' element={<MainPage />} />
+      <Route path='/assistance' element={<AssistancePage />} />
+      <Route path='/contacts' element={<ContactsPage />} />
+      <Route path='/locations' element={<LocationsPage />} />
     </Routes>
   );
 };

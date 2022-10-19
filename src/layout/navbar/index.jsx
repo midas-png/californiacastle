@@ -1,29 +1,39 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { Sidebar } from './sidebar';
 import {
   NavbarWrapper,
   NavigationWrapper,
   NavigationLogo,
   NavigationItem,
+  MenuWrapper,
+  BurgerMenu,
 } from './styles';
 
 const NAVIGATION_ITEMS = [
   {
     label: 'Locations',
-    link_to: '/',
+    link_to: '/locations',
   },
   {
     label: 'Assistance',
-    link_to: '/',
+    link_to: '/assistance',
   },
   {
     label: 'Contacts',
-    link_to: '/',
+    link_to: '/contacts',
   },
 ];
 
+const ROUTES_STATIC_NAVBAR = ['/locations', '/assistance', '/contacts'];
+
 export const Navbar = () => {
+  const { pathname } = useLocation();
   const [onTop, setOnTop] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const isNavbarStatic = ROUTES_STATIC_NAVBAR.includes(pathname);
+  const navbarOnTop = isNavbarStatic ? false : onTop;
+
   useEffect(() => {
     window.onscroll = () =>
       window.scrollY < 80 ? setOnTop(true) : setOnTop(false);
@@ -32,16 +42,25 @@ export const Navbar = () => {
   });
 
   return (
-    <NavbarWrapper $top={onTop}>
-      <NavigationWrapper>
-        <NavigationLogo>California Castle</NavigationLogo>
-        {NAVIGATION_ITEMS.map((item, index) => (
-          <Link to={item.link_to} key={index}>
-            <NavigationItem>{item.label}</NavigationItem>
+    <>
+      <NavbarWrapper $top={navbarOnTop}>
+        <NavigationWrapper>
+          <Link to='/californiacastle'>
+            <NavigationLogo $top={navbarOnTop}>
+              California Castle
+            </NavigationLogo>
           </Link>
-        ))}
-      </NavigationWrapper>
-      <div></div>
-    </NavbarWrapper>
+          {NAVIGATION_ITEMS.map((item, index) => (
+            <Link to={item.link_to} key={index}>
+              <NavigationItem $top={navbarOnTop}>{item.label}</NavigationItem>
+            </Link>
+          ))}
+        </NavigationWrapper>
+        <MenuWrapper>
+          <BurgerMenu $top={navbarOnTop} onClick={() => setSidebarOpen(true)} />
+        </MenuWrapper>
+      </NavbarWrapper>
+      <Sidebar isActive={sidebarOpen} setIsActive={setSidebarOpen} />
+    </>
   );
 };
