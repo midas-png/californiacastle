@@ -8,8 +8,8 @@ export const NavbarWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  height: 65px;
-  margin-top: -65px;
+  height: 80px;
+  margin-top: -80px;
   background: ${(props) =>
     props.$top ? 'transparent' : props.theme.colors.primary};
   box-shadow: ${(props) => !props.$top && props.theme.boxShadow.primary};

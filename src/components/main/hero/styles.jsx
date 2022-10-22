@@ -1,4 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { Button, Title } from 'ui';
+
+const slideIn = keyframes`
+ from { 
+  transform: translateX(150px);
+  opacity: 0.1;
+}
+ to { 
+  transform: translateX(0px);
+  opacity: 1;
+ }
+`;
 
 export const HeroWrapper = styled.div`
   height: 100vh;
@@ -21,7 +33,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   top: 50%;
   left: 50%;
-  transform: translate(-75%, -50%);
+  transform: translate(-70%, -50%);
   flex-direction: column;
   gap: 15px;
 
@@ -35,10 +47,21 @@ export const DescriptionContent = styled.span`
   color: ${(props) => props.theme.colors.primary};
   line-height: 23px;
   letter-spacing: 1px;
+  animation: ${slideIn} 1.5s;
 `;
 
 export const BoldText = styled.span`
   color: ${(props) => props.theme.colors.primary};
   font-family: ${(props) => props.theme.fontFamily.secondary};
   font-weight: 700;
+`;
+
+export const ContentTitle = styled(Title).attrs({
+  variant: 'h1',
+})`
+  animation: ${slideIn} 1s;
+`;
+
+export const ContentButton = styled(Button)`
+  animation: ${slideIn} 2s;
 `;
