@@ -17,7 +17,7 @@ export const headingStyles = {
     line-height: 32px;
   `,
   h4: css`
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     line-height: 28px;
     letter-spacing: 0.05em;
@@ -51,6 +51,6 @@ export const TitleComponent = styled.span`
     font-family: ${props.theme.fontFamily.secondary};
   `}
 
-  ${({ variant }) => headingStyles[variant]}
+  ${({ variant = 'h4' }) => headingStyles[variant]}
   ${({ weight = 'medium' }) => weightStyles[weight]}
 `;

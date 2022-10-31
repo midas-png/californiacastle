@@ -47,7 +47,7 @@ export const DescriptionContent = styled.span`
   color: ${(props) => props.theme.colors.primary};
   line-height: 23px;
   letter-spacing: 1px;
-  animation: ${slideIn} 1.5s;
+  animation: ${slideIn} 1.15s;
 `;
 
 export const BoldText = styled.span`
@@ -59,9 +59,9 @@ export const BoldText = styled.span`
 export const ContentTitle = styled(Title).attrs({
   variant: 'h1',
 })`
-  animation: ${slideIn} 1s;
+  animation: ${slideIn} 0.9s;
 `;
 
 export const ContentButton = styled(Button)`
-  animation: ${slideIn} 2s;
+  animation: ${slideIn} 1.4s;
 `;

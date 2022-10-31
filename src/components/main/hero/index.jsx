@@ -7,7 +7,6 @@ import {
   ContentTitle,
   ContentButton,
 } from './styles';
-import { Button, Title } from 'ui';
 import { Icons } from 'assets';
 
 export const Hero = () => (
