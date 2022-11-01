@@ -13,15 +13,15 @@ import {
 const NAVIGATION_ITEMS = [
   {
     label: 'Locations',
-    link_to: '/locations',
+    linkTo: '/locations',
   },
   {
     label: 'Assistance',
-    link_to: '/assistance',
+    linkTo: '/assistance',
   },
   {
     label: 'Contacts',
-    link_to: '/contacts',
+    linkTo: '/contacts',
   },
 ];
 
@@ -50,9 +50,9 @@ export const Navbar = () => {
               California Castle
             </NavigationLogo>
           </Link>
-          {NAVIGATION_ITEMS.map((item, index) => (
-            <Link to={item.link_to} key={index}>
-              <NavigationItem $top={navbarOnTop}>{item.label}</NavigationItem>
+          {NAVIGATION_ITEMS.map(({ linkTo, label }, index) => (
+            <Link to={linkTo} key={index}>
+              <NavigationItem $top={navbarOnTop}>{label}</NavigationItem>
             </Link>
           ))}
         </NavigationWrapper>

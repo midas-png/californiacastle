@@ -1,12 +1,11 @@
-import { useOutsideClick } from 'domain';
-import { useRef } from 'react';
 import {
   SidebarWrapper,
+  SidebarCancel,
   NavigationWrapper,
   LinksWrapper,
   LinkWrapper as Link,
 } from './styles';
-import { Title } from 'ui';
+import { Title, Button } from 'ui';
 
 const LINKS_ITEMS = [
   {
@@ -24,25 +23,20 @@ const LINKS_ITEMS = [
 ];
 
 export const Sidebar = ({ isActive, setIsActive }) => {
-  const selectRef = useRef(null);
-
-  useOutsideClick(selectRef, () => setIsActive(false));
   return (
     <>
-      <SidebarWrapper $isActive={isActive} ref={selectRef}>
+      <SidebarWrapper $isActive={isActive}>
+        <SidebarCancel onClick={() => setIsActive(false)} />
         <NavigationWrapper>
           <LinksWrapper>
-            {LINKS_ITEMS.map((link, index) => (
-              <Link
-                to={link.linkTo}
-                key={index}
-                onClick={() => setIsActive(false)}>
-                <Title>{link.label}</Title>
+            {LINKS_ITEMS.map(({ linkTo, label }, index) => (
+              <Link to={linkTo} key={index} onClick={() => setIsActive(false)}>
+                <Title>{label}</Title>
               </Link>
             ))}
           </LinksWrapper>
         </NavigationWrapper>
-        <div></div>
+        <Button>Book now</Button>
       </SidebarWrapper>
     </>
   );
