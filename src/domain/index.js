@@ -1,2 +1,2 @@
 export { Theme } from './theme';
-export { useOutsideClick } from './hooks';
+export { useOutsideClick, useToggle } from './hooks';

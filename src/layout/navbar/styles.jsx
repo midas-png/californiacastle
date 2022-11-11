@@ -13,8 +13,6 @@ export const NavbarWrapper = styled.div`
   background: ${(props) =>
     props.$top ? 'transparent' : props.theme.colors.primary};
   box-shadow: ${(props) => !props.$top && props.theme.boxShadow.primary};
-  border-bottom: ${(props) =>
-    !props.$top && `3px solid ${props.theme.colors.tertiary}`};
   transition: all 0.2s ease-in-out;
   z-index: 10;
 `;

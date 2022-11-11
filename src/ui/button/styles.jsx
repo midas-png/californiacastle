@@ -1,5 +1,16 @@
 import styled, { css } from 'styled-components';
 
+const sizeMap = {
+  parent: css`
+    height: 100%;
+    width: 100%;
+  `,
+  primary: css`
+    height: 30px;
+    width: 200px;
+  `,
+};
+
 const colorTypeMap = {
   primary: css`
     background: ${(props) => props.theme.colors.secondary};
@@ -34,5 +45,14 @@ export const ButtonComponent = styled.button`
     transform: scale(0.94);
   }
 
+  ${({ adaptiveStretch }) =>
+    adaptiveStretch &&
+    `
+    @media screen and (max-width: 815px) {
+    width: 60%;
+  }
+  `}
+
+  ${({ size = 'primary' }) => sizeMap[size]};
   ${({ type = 'primary' }) => colorTypeMap[type]};
 `;

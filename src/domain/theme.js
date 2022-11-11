@@ -6,10 +6,11 @@ const theme = {
     primary: '#fff',
     secondary: '#121212',
     tertiary: '#dbdbdb',
+    quaternary: '#757575',
   },
   boxShadow: {
     primary: '0px 4px 20px 10px #0000001a',
-    secondary: '0px 4px 20px 0px #0000000d',
+    secondary: '8px 10px 15px 5px #0000000a',
   },
   fontFamily: {
     primary: '"Rubik", sans-serif',

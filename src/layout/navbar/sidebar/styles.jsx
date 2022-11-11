@@ -13,8 +13,8 @@ export const SidebarWrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   padding: 50px;
-  top: ${({ $isActive }) => ($isActive ? '0' : '-100%')};
-  right: 0;
+  top: 0;
+  right: ${({ $isActive }) => ($isActive ? '0' : '-100%')};
   opacity: ${({ $isActive }) => ($isActive ? '100%' : '0')};
   transition: 0.3s ease-in-out;
   -webkit-appearance: none;
