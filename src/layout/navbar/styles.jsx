@@ -28,6 +28,7 @@ export const NavigationLogo = styled.h1`
   font-weight: 500;
   cursor: pointer;
   color: ${(props) => props.$top && props.theme.colors.primary};
+  margin: 0;
 `;
 
 export const NavigationItem = styled.span`

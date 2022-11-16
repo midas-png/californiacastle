@@ -16,6 +16,7 @@ export const Select = ({
   adaptiveStretch,
   options = [],
   defaultOption,
+  onChange,
 }) => {
   const selectRef = useRef(null);
   const [selected, setSelected] = useState(defaultOption || options[0] || '');
@@ -24,6 +25,13 @@ export const Select = ({
   const handleOutsideClick = () => {
     if (open) {
       toggleOpen();
+    }
+  };
+
+  const handleSelectedChange = (option) => {
+    setSelected(option);
+    if (onChange instanceof Function) {
+      onChange(value);
     }
   };
 
@@ -39,7 +47,10 @@ export const Select = ({
         </SelectContentWrapper>
         <SelectDropdownWrapper open={open}>
           {options.map((option) => (
-            <DropdownItem open={open} adaptiveStretch={adaptiveStretch}>
+            <DropdownItem
+              open={open}
+              adaptiveStretch={adaptiveStretch}
+              onClick={() => handleSelectedChange(option)}>
               {option}
             </DropdownItem>
           ))}

@@ -12,18 +12,22 @@ const BOOKER_ITEMS = [
   },
   {
     title: 'location:',
+    options: ['Los Angeles', 'Miami', 'Detroit'],
     type: 'select',
   },
   {
     title: 'room:',
+    options: ['For 2 persons', 'For 4 Persons'],
     type: 'select',
   },
   {
     title: 'people:',
+    options: true ? [1, 2, 3, 4] : [1, 2],
     type: 'select',
   },
   {
     title: 'programm:',
+    options: ['Programm 1', 'Promgramm 2'],
     type: 'select',
   },
 ];
@@ -31,9 +35,16 @@ const BOOKER_ITEMS = [
 export const Booker = () => {
   return (
     <BookerWrapper>
-      {BOOKER_ITEMS.map(({ title, type }, index) => {
+      {BOOKER_ITEMS.map(({ title, options, type }, index) => {
         if (type === 'select')
-          return <Select key={index} title={title} adaptiveStretch={true} />;
+          return (
+            <Select
+              key={index}
+              title={title}
+              options={options}
+              adaptiveStretch={true}
+            />
+          );
         else
           return (
             <Datepicker key={index} title={title} adaptiveStretch={true} />
