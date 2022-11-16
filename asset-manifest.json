@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/californiacastle/static/css/main.2302dc43.css",
-    "main.js": "/californiacastle/static/js/main.d3b432f7.js",
+    "main.js": "/californiacastle/static/js/main.39abd8eb.js",
     "static/media/main_house.jpg": "/californiacastle/static/media/main_house.4435245a3de2beaf5d40.jpg",
     "index.html": "/californiacastle/index.html",
     "main.2302dc43.css.map": "/californiacastle/static/css/main.2302dc43.css.map",
-    "main.d3b432f7.js.map": "/californiacastle/static/js/main.d3b432f7.js.map"
+    "main.39abd8eb.js.map": "/californiacastle/static/js/main.39abd8eb.js.map"
   },
   "entrypoints": [
     "static/css/main.2302dc43.css",
-    "static/js/main.d3b432f7.js"
+    "static/js/main.39abd8eb.js"
   ]
 }
