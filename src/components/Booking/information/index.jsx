@@ -41,7 +41,7 @@ export const Information = () => {
 
   return (
     <InformationWrapper>
-      <Title variant='h2'>Title</Title>
+      <Title variant='h2'>Schedule Appointment</Title>
       <AppointmentDataWrapper>
         <Textfield
           title='name'

@@ -15,5 +15,5 @@ export const AppointmentDataWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 15px;
-  width: 500px;
+  width: 80%;
 `;

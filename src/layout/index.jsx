@@ -6,9 +6,12 @@ import { Footer } from './footer';
 import { handleRefferalLink } from 'utils';
 import { AppRouter } from 'pages';
 
+const NAVBAR_DISABLED_ROUTES = ['/booking'];
+
 export const Layout = () => {
   const location = useLocation();
   const [searchParams] = useSearchParams();
+  const isNavbarEnabled = !NAVBAR_DISABLED_ROUTES.includes(location.pathname);
 
   useEffect(() => {
     handleRefferalLink(searchParams.get('a'));
@@ -22,7 +25,7 @@ export const Layout = () => {
 
   return (
     <LayoutWrapper>
-      <Navbar />
+      {isNavbarEnabled && <Navbar />}
       <AppRouter />
       <Footer />
     </LayoutWrapper>
