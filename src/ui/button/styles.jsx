@@ -2,11 +2,9 @@ import styled, { css } from 'styled-components';
 
 const sizeMap = {
   parent: css`
-    height: 100%;
     width: 100%;
   `,
   primary: css`
-    height: 30px;
     width: 200px;
   `,
 };
@@ -36,8 +34,7 @@ export const ButtonComponent = styled.button`
   border: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
-  height: 30px;
-  width: 200px;
+  height: 50px;
   text-transform: uppercase;
   letter-spacing: 1px;
 

@@ -5,7 +5,7 @@ export const ComponentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 200px;
+  width: ${({ size }) => (size === 'parent' ? '100%' : '200px')};
 
   ${({ adaptiveStretch }) =>
     adaptiveStretch &&
@@ -62,6 +62,8 @@ export const SelectDropdownWrapper = styled.div`
   background: ${({ theme }) => theme.colors.primary};
   box-shadow: ${({ theme }) => theme.boxShadow.secondary};
   width: 100%;
+  overflow-y: auto;
+  max-height: ${({ open }) => (open ? '250px' : '0')};
   opacity: ${({ open }) => (open ? '1' : '0')};
   transition: all 0.3s ease-in-out;
   margin-top: 5px;

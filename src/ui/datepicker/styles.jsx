@@ -6,7 +6,7 @@ export const ComponentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: 200px;
+  width: ${({ size }) => (size === 'parent' ? '100%' : '200px')};
 
   ${({ adaptiveStretch }) =>
     adaptiveStretch &&

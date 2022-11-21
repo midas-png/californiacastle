@@ -1,41 +1,46 @@
+import { useSessionStorage } from 'domain';
+import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { BookerWrapper } from './styles';
 import { Button, Datepicker, Select } from 'ui';
-
-const BOOKER_ITEMS = [
-  {
-    title: 'check-in:',
-    type: 'date',
-  },
-  {
-    title: 'check-out:',
-    type: 'date',
-  },
-  {
-    title: 'location:',
-    options: ['Los Angeles', 'Miami', 'Detroit'],
-    type: 'select',
-  },
-  {
-    title: 'room:',
-    options: ['For 2 persons', 'For 4 Persons'],
-    type: 'select',
-  },
-  {
-    title: 'people:',
-    options: true ? [1, 2, 3, 4] : [1, 2],
-    type: 'select',
-  },
-  {
-    title: 'programm:',
-    options: ['Programm 1', 'Promgramm 2'],
-    type: 'select',
-  },
-];
+import { BOOKER_ITEMS } from 'data';
 
 export const Booker = () => {
+  const navigate = useNavigate();
+  const [sessionCheckIn] = useSessionStorage(
+    'check_in',
+    new Date().toISOString().slice(0, 10),
+  );
+  const [sessionCheckOut] = useSessionStorage('check_out', '1 Month');
+  const [sessionLocation] = useSessionStorage('location', 'Los Angeles');
+  const [sessionRoom] = useSessionStorage('room', 'For 4 persons');
+  const [sessionProgram] = useSessionStorage('program', 'Program 1');
+  const {
+    handleSubmit,
+    setValue,
+    getValues,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      check_in: sessionCheckIn,
+      check_out: sessionCheckOut,
+      location: sessionLocation,
+      room: sessionRoom,
+      program: sessionProgram,
+    },
+  });
+
+  const handleBookingData = () => {
+    const values = getValues();
+    Object.keys(values).forEach((key) => {
+      sessionStorage.setItem(key, values[key]);
+    });
+    navigate('/booking');
+  };
+
   return (
     <BookerWrapper>
-      {BOOKER_ITEMS.map(({ title, options, type }, index) => {
+      {BOOKER_ITEMS.map(({ title, name, options, type }, index) => {
         if (type === 'select')
           return (
             <Select
@@ -43,14 +48,24 @@ export const Booker = () => {
               title={title}
               options={options}
               adaptiveStretch={true}
+              onChange={(option) => setValue(name || title, option)}
             />
           );
         else
           return (
-            <Datepicker key={index} title={title} adaptiveStretch={true} />
+            <Datepicker
+              key={index}
+              title={title}
+              defaultValue={getValues(name)}
+              minDate={getValues(name)}
+              adaptiveStretch={true}
+              onChange={(date) => setValue(name, date)}
+            />
           );
       })}
-      <Button adaptiveStretch={true}>Book</Button>
+      <Button adaptiveStretch={true} onClick={handleSubmit(handleBookingData)}>
+        Book
+      </Button>
     </BookerWrapper>
   );
 };

@@ -68,11 +68,11 @@ export const FacebookLogo = styled(FaFacebook)`
 
   stroke-width: 10;
   fill: transparent;
-  stroke: white;
+  stroke: #fff;
 
   &:hover {
-    fill: blue;
-    stroke: blue;
+    fill: #4267b2;
+    stroke: #4267b2;
   }
 `;
 
@@ -84,10 +84,10 @@ export const YoutubeLogo = styled(FaYoutube)`
 
   stroke-width: 10;
   fill: transparent;
-  stroke: white;
+  stroke: #fff;
 
   &:hover {
-    fill: red;
-    stroke: red;
+    fill: #f00;
+    stroke: #f00;
   }
 `;

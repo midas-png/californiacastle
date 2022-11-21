@@ -14,6 +14,7 @@ import {
 export const Select = ({
   title,
   adaptiveStretch,
+  size,
   options = [],
   defaultOption,
   onChange,
@@ -31,15 +32,18 @@ export const Select = ({
   const handleSelectedChange = (option) => {
     setSelected(option);
     if (onChange instanceof Function) {
-      onChange(value);
+      onChange(option);
     }
   };
 
   useOutsideClick(selectRef, handleOutsideClick);
 
   return (
-    <ComponentWrapper adaptiveStretch={adaptiveStretch} ref={selectRef}>
-      {title && <SelectTitle>{title}</SelectTitle>}
+    <ComponentWrapper
+      size={size}
+      adaptiveStretch={adaptiveStretch}
+      ref={selectRef}>
+      {title && <SelectTitle>{`${title}:`}</SelectTitle>}
       <SelectWrapper open={open} onClick={toggleOpen}>
         <SelectContentWrapper>
           <SelectContent>{selected}</SelectContent>
@@ -48,6 +52,7 @@ export const Select = ({
         <SelectDropdownWrapper open={open}>
           {options.map((option) => (
             <DropdownItem
+              key={Math.random()}
               open={open}
               adaptiveStretch={adaptiveStretch}
               onClick={() => handleSelectedChange(option)}>
