@@ -6,7 +6,7 @@ export const InformationWrapper = styled.div`
   align-items: center;
   gap: 15px;
   padding: 30px;
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.primary};'
 `;
 
 export const AppointmentDataWrapper = styled.div`

@@ -4,5 +4,5 @@ export const LayoutWrapper = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  min-height: 140vh;
+  min-height: 100vh;
 `;
