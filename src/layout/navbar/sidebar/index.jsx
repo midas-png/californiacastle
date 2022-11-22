@@ -1,24 +1,21 @@
+import { Link } from 'react-router-dom';
 import {
   SidebarWrapper,
   SidebarCancel,
   NavigationWrapper,
   LinksWrapper,
-  LinkWrapper as Link,
+  LinkWrapper,
 } from './styles';
 import { Title, Button } from 'ui';
 
 const LINKS_ITEMS = [
   {
-    label: 'Locations',
-    linkTo: '/locations ',
+    label: 'Home',
+    linkTo: '/californiacastle',
   },
   {
-    label: 'Assistance',
-    linkTo: '/assistance',
-  },
-  {
-    label: 'Contacts',
-    linkTo: '/contacts',
+    label: 'About us',
+    linkTo: '/about',
   },
 ];
 
@@ -30,13 +27,18 @@ export const Sidebar = ({ isActive, setIsActive }) => {
         <NavigationWrapper>
           <LinksWrapper>
             {LINKS_ITEMS.map(({ linkTo, label }, index) => (
-              <Link to={linkTo} key={index} onClick={() => setIsActive(false)}>
+              <LinkWrapper
+                to={linkTo}
+                key={index}
+                onClick={() => setIsActive(false)}>
                 <Title>{label}</Title>
-              </Link>
+              </LinkWrapper>
             ))}
           </LinksWrapper>
         </NavigationWrapper>
-        <Button>Book now</Button>
+        <Link to='/booking'>
+          <Button>Book</Button>
+        </Link>
       </SidebarWrapper>
     </>
   );

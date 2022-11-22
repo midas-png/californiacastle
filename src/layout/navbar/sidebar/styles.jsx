@@ -45,6 +45,7 @@ export const LinkWrapper = styled(Link)`
   display: inline-block;
   margin-top: 8px;
   text-transform: uppercase;
+  text-align: center;
   cursor: pointer;
 
   &:after {

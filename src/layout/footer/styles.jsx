@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FaFacebook, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaYoutube, FaLinkedin } from 'react-icons/fa';
 
 export const FooterWrapper = styled.div`
   display: flex;
@@ -89,5 +89,21 @@ export const YoutubeLogo = styled(FaYoutube)`
   &:hover {
     fill: #f00;
     stroke: #f00;
+  }
+`;
+
+export const LinkedinLogo = styled(FaLinkedin)`
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  stroke-width: 10;
+  fill: transparent;
+  stroke: #fff;
+
+  &:hover {
+    fill: #0e76a8;
+    stroke: #0e76a8;
   }
 `;

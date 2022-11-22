@@ -2,30 +2,28 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Sidebar } from './sidebar';
 import {
+  ButtonWrapper,
+  BurgerMenu,
   NavbarWrapper,
   NavigationWrapper,
   NavigationLogo,
   NavigationItem,
   MenuWrapper,
-  BurgerMenu,
 } from './styles';
+import { Button } from 'ui';
 
 const NAVIGATION_ITEMS = [
   {
-    label: 'Locations',
-    linkTo: '/locations',
+    label: 'Home',
+    linkTo: '/californiacastle',
   },
   {
-    label: 'Assistance',
-    linkTo: '/assistance',
-  },
-  {
-    label: 'Contacts',
-    linkTo: '/contacts',
+    label: 'About us',
+    linkTo: '/about',
   },
 ];
 
-const ROUTES_STATIC_NAVBAR = ['/locations', '/assistance', '/contacts'];
+const ROUTES_STATIC_NAVBAR = ['/about'];
 
 export const Navbar = () => {
   const { pathname } = useLocation();
@@ -56,6 +54,9 @@ export const Navbar = () => {
             </Link>
           ))}
         </NavigationWrapper>
+        <ButtonWrapper $top={navbarOnTop} to='/booking'>
+          <Button>Book</Button>
+        </ButtonWrapper>
         <MenuWrapper>
           <BurgerMenu $top={navbarOnTop} onClick={() => setSidebarOpen(true)} />
         </MenuWrapper>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { BiMenu } from 'react-icons/bi';
 
 export const NavbarWrapper = styled.div`
@@ -73,4 +74,14 @@ export const BurgerMenu = styled(BiMenu).attrs((props) => ({
   height: 100%;
   width: 100%;
   cursor: pointer;
+`;
+
+export const ButtonWrapper = styled(Link)`
+  display: ${({ $top }) => $top && 'none'};
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;

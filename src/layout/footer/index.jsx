@@ -8,6 +8,7 @@ import {
   LogoWrapper,
   FacebookLogo,
   YoutubeLogo,
+  LinkedinLogo,
 } from './styles';
 
 const NAVIGATION_ITEMS = [
@@ -38,6 +39,7 @@ export const Footer = () => (
     <LogoWrapper>
       <FacebookLogo />
       <YoutubeLogo />
+      <LinkedinLogo />
     </LogoWrapper>
     <RightsReserved>
       &copy; {new Date().getFullYear()} All rights reserved
