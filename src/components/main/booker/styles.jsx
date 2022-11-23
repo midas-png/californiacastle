@@ -11,6 +11,7 @@ export const BookerWrapper = styled.div`
   -webkit-appearance: none;
   background: ${({ theme }) => theme.colors.primary};
   box-shadow: ${({ theme }) => theme.boxShadow.primary};
+  z-index: 2;
 
   @media screen and (max-width: 815px) {
     flex-direction: column;

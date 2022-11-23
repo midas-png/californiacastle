@@ -10,4 +10,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${(props) => props.theme.colors.secondary};
     font-family: ${(props) => props.theme.fontFamily.primary};
   }
+
+  b {
+    font-family: ${(props) => props.theme.fontFamily.secondary};
+  }
 `;
