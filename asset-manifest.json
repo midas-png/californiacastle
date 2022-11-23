@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/californiacastle/static/css/main.2302dc43.css",
-    "main.js": "/californiacastle/static/js/main.deeb7ec5.js",
+    "main.css": "/californiacastle/static/css/main.68679547.css",
+    "main.js": "/californiacastle/static/js/main.8dd00632.js",
+    "static/media/mock_house_2.jpg": "/californiacastle/static/media/mock_house_2.c8c287d4e1b829d27158.jpg",
+    "static/media/mock_house_4.jpg": "/californiacastle/static/media/mock_house_4.895e10f64edf80aa7a5d.jpg",
     "static/media/main_house.jpg": "/californiacastle/static/media/main_house.4435245a3de2beaf5d40.jpg",
+    "static/media/mock_house_3.jpg": "/californiacastle/static/media/mock_house_3.030e1e961dba5bdc9f63.jpg",
+    "static/media/mock_house_1.jpg": "/californiacastle/static/media/mock_house_1.7040b63fbaa1224aba21.jpg",
     "static/media/apartment_rent.svg": "/californiacastle/static/media/apartment_rent.de3aa645f5f23cc5362a28b5a0a13418.svg",
     "index.html": "/californiacastle/index.html",
-    "main.2302dc43.css.map": "/californiacastle/static/css/main.2302dc43.css.map",
-    "main.deeb7ec5.js.map": "/californiacastle/static/js/main.deeb7ec5.js.map"
+    "main.68679547.css.map": "/californiacastle/static/css/main.68679547.css.map",
+    "main.8dd00632.js.map": "/californiacastle/static/js/main.8dd00632.js.map"
   },
   "entrypoints": [
-    "static/css/main.2302dc43.css",
-    "static/js/main.deeb7ec5.js"
+    "static/css/main.68679547.css",
+    "static/js/main.8dd00632.js"
   ]
 }
