@@ -1,6 +1,7 @@
 import { Hero } from './hero';
 import { Booker } from './booker';
 import { TitleComponent as Title } from './styles';
+import { Icons } from 'assets';
 import { Location } from 'components';
 
 const LOCATIONS_AVALIABLE = [
@@ -15,6 +16,12 @@ const LOCATIONS_AVALIABLE = [
       consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna
       ali lorem ipsum dolor.`,
+    images: [
+      Icons.MockHouse1,
+      Icons.MockHouse2,
+      Icons.MockHouse3,
+      Icons.MockHouse4,
+    ],
   },
   {
     reverse: true,
@@ -28,6 +35,12 @@ const LOCATIONS_AVALIABLE = [
       consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna
       ali lorem ipsum dolor.`,
+    images: [
+      Icons.MockHouse1,
+      Icons.MockHouse2,
+      Icons.MockHouse3,
+      Icons.MockHouse4,
+    ],
   },
   {
     category: 'Category',
@@ -40,6 +53,12 @@ const LOCATIONS_AVALIABLE = [
       consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna
       ali lorem ipsum dolor.`,
+    images: [
+      Icons.MockHouse1,
+      Icons.MockHouse2,
+      Icons.MockHouse3,
+      Icons.MockHouse4,
+    ],
   },
 ];
 
@@ -55,6 +74,7 @@ export const Main = () => {
           category={location.category}
           title={location.title}
           description={location.description}
+          images={location.images}
         />
       ))}
     </>

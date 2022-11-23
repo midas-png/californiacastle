@@ -3,7 +3,11 @@ import styled from 'styled-components';
 export const LocationWrapper = styled.div`
   display: flex;
   flex-direction: ${({ reverse }) => reverse && 'row-reverse'};
-  height: 650px;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -14,6 +18,11 @@ export const ContentWrapper = styled.div`
   gap: 30px;
   background: ${({ theme }) => theme.colors.primary};
   width: 42%;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    padding: 30px 0;
+  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -39,7 +48,11 @@ export const ContentDescription = styled.span`
   text-align: center;
 `;
 
-export const Right = styled.div`
+export const SwiperWrapper = styled.div`
   background: ${({ theme }) => theme.colors.secondary};
   width: 58%;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 `;

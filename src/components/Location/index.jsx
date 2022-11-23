@@ -5,11 +5,11 @@ import {
   ContentCategory,
   ContentDescription,
   TitleWrapper,
-  Right,
+  SwiperWrapper,
 } from './styles';
-import { Button } from 'ui';
+import { Button, Swiper } from 'ui';
 
-export const Location = ({ reverse, category, title, description }) => {
+export const Location = ({ reverse, category, title, description, images }) => {
   return (
     <LocationWrapper reverse={reverse}>
       <ContentWrapper>
@@ -20,7 +20,9 @@ export const Location = ({ reverse, category, title, description }) => {
           <Button>Book now</Button>
         </Link>
       </ContentWrapper>
-      <Right />
+      <SwiperWrapper>
+        <Swiper images={images} />
+      </SwiperWrapper>
     </LocationWrapper>
   );
 };
