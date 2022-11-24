@@ -75,6 +75,7 @@ export const Information = () => {
                 key={index}
                 title={title}
                 options={options}
+                defaultOption={sessionStorage.getItem(name || title)}
                 size='parent'
                 onChange={(option) => setValue(name || title, option)}
               />
