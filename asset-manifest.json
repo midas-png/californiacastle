@@ -1,19 +1,28 @@
 {
   "files": {
     "main.css": "/californiacastle/static/css/main.68679547.css",
-    "main.js": "/californiacastle/static/js/main.8dd00632.js",
+    "main.js": "/californiacastle/static/js/main.85978914.js",
     "static/media/mock_house_2.jpg": "/californiacastle/static/media/mock_house_2.c8c287d4e1b829d27158.jpg",
     "static/media/mock_house_4.jpg": "/californiacastle/static/media/mock_house_4.895e10f64edf80aa7a5d.jpg",
     "static/media/main_house.jpg": "/californiacastle/static/media/main_house.4435245a3de2beaf5d40.jpg",
     "static/media/mock_house_3.jpg": "/californiacastle/static/media/mock_house_3.030e1e961dba5bdc9f63.jpg",
+    "static/media/benefits_house.jpg": "/californiacastle/static/media/benefits_house.2c3dac6b8cda585d2d4c.jpg",
+    "static/media/vala_logo.jpg": "/californiacastle/static/media/vala_logo.742c1def4ff6cfcd16e8.jpg",
     "static/media/mock_house_1.jpg": "/californiacastle/static/media/mock_house_1.7040b63fbaa1224aba21.jpg",
+    "static/media/dpss_logo.png": "/californiacastle/static/media/dpss_logo.1d453c2359dc24b7ae25.png",
+    "static/media/lalc_logo.png": "/californiacastle/static/media/lalc_logo.83cc5fed2ebd98e26362.png",
+    "static/media/path_logo.png": "/californiacastle/static/media/path_logo.e37b99e36ff54053a2ed.png",
     "static/media/apartment_rent.svg": "/californiacastle/static/media/apartment_rent.de3aa645f5f23cc5362a28b5a0a13418.svg",
+    "static/media/lam_logo.png": "/californiacastle/static/media/lam_logo.ff7e2805215613fe4b39.png",
+    "static/media/pasadena_logo.png": "/californiacastle/static/media/pasadena_logo.59900dd2fa9e9b1a155b.png",
+    "static/media/dwc_logo.png": "/californiacastle/static/media/dwc_logo.91b79b6da4eb74ab93d8.png",
+    "static/media/tpc_logo.png": "/californiacastle/static/media/tpc_logo.b698fcbee7f4624e37b6.png",
     "index.html": "/californiacastle/index.html",
     "main.68679547.css.map": "/californiacastle/static/css/main.68679547.css.map",
-    "main.8dd00632.js.map": "/californiacastle/static/js/main.8dd00632.js.map"
+    "main.85978914.js.map": "/californiacastle/static/js/main.85978914.js.map"
   },
   "entrypoints": [
     "static/css/main.68679547.css",
-    "static/js/main.8dd00632.js"
+    "static/js/main.85978914.js"
   ]
 }
