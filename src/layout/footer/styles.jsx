@@ -24,6 +24,11 @@ export const RightsWrapper = styled.div`
   width: 80%;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
 `;
 
 export const FooterLogo = styled.h1`
@@ -32,16 +37,17 @@ export const FooterLogo = styled.h1`
   cursor: pointer;
   color: ${({ theme }) => theme.colors.primary};
   margin: 0;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavigationWrapper = styled.div`
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   gap: 60px;
-
-  @media screen and (max-width: 768px) {
-    // display: none;
-  }
 `;
 
 export const NavigationItem = styled.span`
