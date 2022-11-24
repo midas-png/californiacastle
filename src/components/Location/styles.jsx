@@ -56,3 +56,14 @@ export const SwiperWrapper = styled.div`
     width: 100%;
   }
 `;
+
+export const PriceWrapper = styled.b`
+  font-size: ${({ theme }) => theme.fontSize.giant};
+`;
+
+export const PricePerMonth = styled.span`
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: ${({ theme }) => theme.fontSize.small};
+  color: ${({ theme }) => theme.colors.quaternary};
+`;

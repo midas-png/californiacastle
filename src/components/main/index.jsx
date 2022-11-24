@@ -1,6 +1,8 @@
 import { Hero } from './hero';
 import { Booker } from './booker';
 import { TitleComponent as Title } from './styles';
+import { Info } from './info';
+import { Social } from './social';
 import { Icons } from 'assets';
 import { Location } from 'components';
 
@@ -12,6 +14,7 @@ const LOCATIONS_AVALIABLE = [
         <b>Cozy housing</b> in Los Angeles
       </Title>
     ),
+    price: 700,
     description: `Lorem ipsum dolor sit amet,
       consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -28,13 +31,14 @@ const LOCATIONS_AVALIABLE = [
     category: 'Category',
     title: (
       <Title secondaryFont>
-        <b>The Art of meeting</b> your highest expectations
+        <b>Cozy housing</b> in Miami
       </Title>
     ),
     description: `Lorem ipsum dolor sit amet,
       consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna
       ali lorem ipsum dolor.`,
+    price: 670,
     images: [
       Icons.MockHouse1,
       Icons.MockHouse2,
@@ -73,10 +77,13 @@ export const Main = () => {
           reverse={location.reverse}
           category={location.category}
           title={location.title}
+          price={location.price}
           description={location.description}
           images={location.images}
         />
       ))}
+      <Info />
+      <Social />
     </>
   );
 };

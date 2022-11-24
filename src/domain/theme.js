@@ -17,6 +17,7 @@ const theme = {
     secondary: '"Cormorant Garamond", serif',
   },
   fontSize: {
+    giant: '34px',
     large: '24px',
     medium: '20px',
     small: '16px',

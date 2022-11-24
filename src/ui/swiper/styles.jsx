@@ -17,6 +17,7 @@ export const SwiperComponent = styled(Swiper).attrs(() => ({
   .swiper-button-prev,
   .swiper-button-next {
     color: ${({ theme }) => theme.colors.secondary};
+    transform: scale(1.3);
   }
 `;
 
