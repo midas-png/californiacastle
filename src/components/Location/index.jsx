@@ -12,6 +12,7 @@ import {
 import { Button, Swiper } from 'ui';
 
 export const Location = ({
+  id,
   reverse,
   category,
   title,
@@ -31,7 +32,7 @@ export const Location = ({
             <PricePerMonth> / Month</PricePerMonth>
           </div>
         )}
-        <Link to='/booking'>
+        <Link to={`/room/${id}`}>
           <Button>Book now</Button>
         </Link>
       </ContentWrapper>

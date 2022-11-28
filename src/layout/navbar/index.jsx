@@ -54,9 +54,6 @@ export const Navbar = () => {
             </Link>
           ))}
         </NavigationWrapper>
-        <ButtonWrapper $top={navbarOnTop} to='/booking'>
-          <Button>Book</Button>
-        </ButtonWrapper>
         <MenuWrapper>
           <BurgerMenu $top={navbarOnTop} onClick={() => setSidebarOpen(true)} />
         </MenuWrapper>

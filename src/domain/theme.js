@@ -7,6 +7,7 @@ const theme = {
     secondary: '#121212',
     tertiary: '#dbdbdb',
     quaternary: '#757575',
+    quinary: '#f2f2f2',
   },
   boxShadow: {
     primary: '0px 4px 20px 10px #0000001a',

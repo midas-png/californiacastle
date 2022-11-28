@@ -4,7 +4,7 @@ import { Icons } from 'assets';
 export const BookingWrapper = styled.div`
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 58% 42%;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;

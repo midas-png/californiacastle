@@ -1,13 +1,13 @@
 /* eslint-disable import/no-unresolved */
 import styled from 'styled-components';
-import { Navigation, EffectFade } from 'swiper';
+import { Navigation, EffectFade, Autoplay } from 'swiper';
 import { Swiper } from 'swiper/react';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import 'swiper/css';
 
 export const SwiperComponent = styled(Swiper).attrs(() => ({
-  modules: [Navigation, EffectFade],
+  modules: [Navigation, EffectFade, Autoplay],
   navigation: true,
   loop: true,
   effect: 'fade',

@@ -8,6 +8,7 @@ import { Location } from 'components';
 
 const LOCATIONS_AVALIABLE = [
   {
+    id: 1,
     category: 'Category',
     title: (
       <Title secondaryFont>
@@ -27,6 +28,7 @@ const LOCATIONS_AVALIABLE = [
     ],
   },
   {
+    id: 2,
     reverse: true,
     category: 'Category',
     title: (
@@ -47,6 +49,7 @@ const LOCATIONS_AVALIABLE = [
     ],
   },
   {
+    id: 3,
     category: 'Category',
     title: (
       <Title secondaryFont>
@@ -74,6 +77,7 @@ export const Main = () => {
       {LOCATIONS_AVALIABLE.map((location, index) => (
         <Location
           key={index}
+          id={location.id}
           reverse={location.reverse}
           category={location.category}
           title={location.title}
