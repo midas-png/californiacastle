@@ -13,7 +13,7 @@ export const Datepicker = ({
 }) => {
   const handleDateChange = (date) => {
     if (onChange instanceof Function) {
-      onChange(new Date().toISOString().slice(0, 10));
+      onChange(new Date(date).toISOString().slice(0, 10));
     }
   };
 
@@ -22,7 +22,7 @@ export const Datepicker = ({
       {title && <DatepickerTitle>{`${title}:`}</DatepickerTitle>}
       <DatepickerWrapper
         adaptiveStretch={adaptiveStretch}
-        defaultValue={defaultValue ? moment(defaultValue, dateFormat) : null}
+        defaultValue={moment(defaultValue, dateFormat)}
         disabledDate={(date) => !date || date.isBefore(minDate)}
         onChange={(date) => handleDateChange(date)}
       />

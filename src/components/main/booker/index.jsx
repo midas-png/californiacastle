@@ -69,7 +69,7 @@ export const Booker = () => {
         <Button
           adaptiveStretch={true}
           onClick={handleSubmit(handleBookingData)}>
-          Book
+          Save
         </Button>
       </Link>
     </BookerWrapper>
