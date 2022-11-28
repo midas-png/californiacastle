@@ -86,7 +86,9 @@ export const Reservation = () => {
         <PriceTitle>Price:</PriceTitle>
         <Price>300$ / month</Price>
       </PriceWrapper>
-      <Button size='parent' onClick={handleSubmit((data) => console.log(data))}>
+      <Button
+        size='parent'
+        onClick={handleSubmit((data) => console.log('booked!'))}>
         Book
       </Button>
     </ReservationWrapper>
