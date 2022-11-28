@@ -38,8 +38,8 @@ export const Info = () => (
         <b>Lorem ipsum dolor sit amet, </b>consectetur adipisicing elit
       </Title>
       <BenefitsWrapper>
-        {BENEFITS.map(({ title, description }) => (
-          <Benefit title={title} description={description} />
+        {BENEFITS.map(({ title, description }, index) => (
+          <Benefit key={index} title={title} description={description} />
         ))}
       </BenefitsWrapper>
     </ContentWrapper>

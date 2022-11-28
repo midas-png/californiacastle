@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const DetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
   width: 75%;
 
@@ -14,6 +15,10 @@ export const DetailsWrapper = styled.div`
 export const SwiperWrapper = styled.div`
   background: ${({ theme }) => theme.colors.secondary};
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    width: 130%;
+  }
 `;
 
 export const InfoWrapper = styled.div`

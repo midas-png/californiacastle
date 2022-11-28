@@ -34,8 +34,8 @@ export const Social = () => (
         <b>We accept</b> these social programs
       </Title>
       <ProgramsWrapper>
-        {PROGRAMS_LOGO.map((logo) => (
-          <ProgramLogo src={logo} />
+        {PROGRAMS_LOGO.map((logo, index) => (
+          <ProgramLogo key={index} src={logo} />
         ))}
       </ProgramsWrapper>
     </ContentWrapper>

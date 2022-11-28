@@ -23,13 +23,13 @@ const NAVIGATION_ITEMS = [
   },
 ];
 
-const ROUTES_STATIC_NAVBAR = ['/about'];
+const ROUTES_DYNAMIC_NAVBAR = ['/californiacastle'];
 
 export const Navbar = () => {
   const { pathname } = useLocation();
   const [onTop, setOnTop] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const isNavbarStatic = ROUTES_STATIC_NAVBAR.includes(pathname);
+  const isNavbarStatic = !ROUTES_DYNAMIC_NAVBAR.includes(pathname);
   const navbarOnTop = isNavbarStatic ? false : onTop;
 
   useEffect(() => {

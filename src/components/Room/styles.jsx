@@ -4,11 +4,19 @@ import { Title } from 'ui';
 export const RoomWrapper = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 80px;
+  }
 `;
 
 export const ImageWrapper = styled.div`
   background: ${({ theme }) => theme.colors.secondary};
   height: 400px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ImageHeader = styled.img`
