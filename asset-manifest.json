@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/californiacastle/static/css/main.68679547.css",
-    "main.js": "/californiacastle/static/js/main.37b9dc42.js",
+    "main.js": "/californiacastle/static/js/main.bd87d971.js",
     "static/media/mock_house_2.jpg": "/californiacastle/static/media/mock_house_2.c8c287d4e1b829d27158.jpg",
     "static/media/mock_house_4.jpg": "/californiacastle/static/media/mock_house_4.895e10f64edf80aa7a5d.jpg",
     "static/media/main_house.jpg": "/californiacastle/static/media/main_house.4435245a3de2beaf5d40.jpg",
     "static/media/mock_house_3.jpg": "/californiacastle/static/media/mock_house_3.030e1e961dba5bdc9f63.jpg",
     "static/media/benefits_house.jpg": "/californiacastle/static/media/benefits_house.2c3dac6b8cda585d2d4c.jpg",
+    "static/media/room-header-image.jpg": "/californiacastle/static/media/room-header-image.09d69b9e8c504d78546d.jpg",
     "static/media/vala_logo.jpg": "/californiacastle/static/media/vala_logo.742c1def4ff6cfcd16e8.jpg",
     "static/media/mock_house_1.jpg": "/californiacastle/static/media/mock_house_1.7040b63fbaa1224aba21.jpg",
     "static/media/dpss_logo.png": "/californiacastle/static/media/dpss_logo.1d453c2359dc24b7ae25.png",
@@ -19,10 +20,10 @@
     "static/media/tpc_logo.png": "/californiacastle/static/media/tpc_logo.b698fcbee7f4624e37b6.png",
     "index.html": "/californiacastle/index.html",
     "main.68679547.css.map": "/californiacastle/static/css/main.68679547.css.map",
-    "main.37b9dc42.js.map": "/californiacastle/static/js/main.37b9dc42.js.map"
+    "main.bd87d971.js.map": "/californiacastle/static/js/main.bd87d971.js.map"
   },
   "entrypoints": [
     "static/css/main.68679547.css",
-    "static/js/main.37b9dc42.js"
+    "static/js/main.bd87d971.js"
   ]
 }
