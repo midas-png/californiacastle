@@ -38,6 +38,11 @@ export const RoomDataWrapper = styled.div`
   background: ${({ theme }) => theme.colors.primary};
   width: 85%;
   padding: 30px 40px;
+
+  @media screen and (max-width: 768px) {
+    top: 0;
+    width: 100%;
+  }
 `;
 
 export const RoomInfo = styled.div`

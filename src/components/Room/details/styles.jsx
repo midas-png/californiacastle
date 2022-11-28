@@ -54,6 +54,11 @@ export const SectionPointsWrapper = styled.div`
   grid-template-columns: repeat(3, 150px);
   grid-template-rows: repeat(auto-fit, fit-content(100%));
   gap: 10px 50px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, fit-content(100%));
+    width: 100%;
+  }
 `;
 
 export const PriceWrapper = styled.div`
