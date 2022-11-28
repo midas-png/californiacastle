@@ -27,7 +27,10 @@ export const Footer = () => (
           <NavigationItem>Opening Hours</NavigationItem>
           <InformationUnits>
             <InformationContent>
-              Weekdays, Saturday: <InformationTime>11AM - 6PM</InformationTime>
+              Weekdays: <InformationTime>11AM - 6PM</InformationTime>
+            </InformationContent>
+            <InformationContent>
+              Saturday: <InformationTime>11AM - 6PM</InformationTime>
             </InformationContent>
             <InformationContent>
               Sunday: <InformationTime>11AM - 4PM</InformationTime>

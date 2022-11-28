@@ -83,6 +83,7 @@ export const InformationContent = styled.span`
   display: flex;
   gap: 5px;
   align-items: center;
+  justify-content: space-between;
   color: ${({ theme }) => theme.colors.primary};
 `;
 
