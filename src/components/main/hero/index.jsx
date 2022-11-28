@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import {
   HeroWrapper,
   HeroImage,
@@ -23,9 +24,9 @@ export const Hero = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </DescriptionContent>
-        <ContentButton onClick={() => navigate('/booking')}>
-          Book now
-        </ContentButton>
+        <Link to='booker' spy={true} smooth={true} offset={-80} duration={1000}>
+          <ContentButton>Book now</ContentButton>
+        </Link>
       </ContentWrapper>
     </HeroWrapper>
   );

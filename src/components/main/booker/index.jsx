@@ -1,12 +1,11 @@
 import { useSessionStorage } from 'domain';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { BookerWrapper } from './styles';
 import { Button, Datepicker, Select } from 'ui';
 import { BOOKER_ITEMS } from 'data';
 
 export const Booker = () => {
-  const navigate = useNavigate();
   const [sessionCheckIn] = useSessionStorage(
     'check_in',
     new Date().toISOString().slice(0, 10),
@@ -35,11 +34,10 @@ export const Booker = () => {
     Object.keys(values).forEach((key) => {
       sessionStorage.setItem(key, values[key]);
     });
-    navigate('/booking');
   };
 
   return (
-    <BookerWrapper>
+    <BookerWrapper id='booker'>
       {BOOKER_ITEMS.map(({ title, name, options, type }, index) => {
         if (type === 'select')
           return (
@@ -63,9 +61,18 @@ export const Booker = () => {
             />
           );
       })}
-      <Button adaptiveStretch={true} onClick={handleSubmit(handleBookingData)}>
-        Book
-      </Button>
+      <Link
+        to='location1'
+        spy={true}
+        smooth={true}
+        offset={-80}
+        duration={1000}>
+        <Button
+          adaptiveStretch={true}
+          onClick={handleSubmit(handleBookingData)}>
+          Book
+        </Button>
+      </Link>
     </BookerWrapper>
   );
 };

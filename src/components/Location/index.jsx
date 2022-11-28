@@ -21,7 +21,7 @@ export const Location = ({
   images,
 }) => {
   return (
-    <LocationWrapper reverse={reverse}>
+    <LocationWrapper id={`location${id}`} reverse={reverse}>
       <ContentWrapper>
         {category && <ContentCategory>{category}</ContentCategory>}
         {title && <TitleWrapper>{title}</TitleWrapper>}
