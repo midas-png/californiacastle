@@ -46,7 +46,6 @@ export const FooterLogo = styled.h1`
 export const NavigationWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
   gap: 60px;
 `;
 
@@ -83,12 +82,12 @@ export const InformationContent = styled.span`
   display: flex;
   gap: 5px;
   align-items: center;
-  justify-content: space-between;
   color: ${({ theme }) => theme.colors.primary};
 `;
 
 export const InformationTime = styled.span`
   color: ${({ theme }) => theme.colors.quaternary};
+  margin-left: auto;
 `;
 
 export const FacebookLogo = styled(FaFacebook)`
