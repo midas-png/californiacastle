@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 export const BookerWrapper = styled.div`
   display: flex;
@@ -19,5 +20,14 @@ export const BookerWrapper = styled.div`
     padding: 30px 0;
     justify-content: center;
     align-items: center;
+  }
+`;
+
+export const LinkScroll = styled(Link)`
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 815px) {
+    width: 100%;
   }
 `;

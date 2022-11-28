@@ -1,7 +1,6 @@
 import { useSessionStorage } from 'domain';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-scroll';
-import { BookerWrapper } from './styles';
+import { BookerWrapper, LinkScroll as Link } from './styles';
 import { Button, Datepicker, Select } from 'ui';
 import { BOOKER_ITEMS } from 'data';
 

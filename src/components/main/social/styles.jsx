@@ -30,7 +30,7 @@ export const SwiperWrapper = styled.div`
   width: 58%;
 
   @media screen and (max-width: 1024px) {
-    width: 100%;
+    display: none;
   }
 `;
 

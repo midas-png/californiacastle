@@ -5,7 +5,7 @@ export const InfoWrapper = styled.div`
   display: flex;
 
   @media screen and (max-width: 1024px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 20px;
   }
 `;
