@@ -7,7 +7,8 @@ export const ReservationWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   border: 1px solid ${({ theme }) => theme.colors.tertiary};
-  height: 75%;
+  height: 60%;
+  height: fit-content;
   width: 25%;
   padding: 15px 25px;
   gap: 15px;

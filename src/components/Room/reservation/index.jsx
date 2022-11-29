@@ -65,6 +65,7 @@ export const Reservation = () => {
                 name={name}
                 size='parent'
                 error={errors[name]}
+                defaultValue={sessionStorage.getItem(name)}
                 placeholder={placeholder}
                 {...register(name)}
               />
