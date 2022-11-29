@@ -3,6 +3,7 @@ import { Title } from 'ui';
 
 export const SocialWrapper = styled.div`
   display: flex;
+  flex-direction: row-reverse;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;

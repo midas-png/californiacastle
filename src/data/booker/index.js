@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export const BOOKER_ITEMS = [
   {
     title: 'name',
@@ -38,8 +39,18 @@ export const BOOKER_ITEMS = [
     type: 'select',
   },
   {
-    title: 'program',
-    options: ['Program 1', 'Promgram 2'],
+    title: 'program (optional)',
+    options: [
+      'None',
+      'DPSS', 
+      'Path', 
+      'Downtown Women\'s Center', 
+      'Pasadena', 
+      'LA LGBT Center', 
+      'The People Concern',
+      'LA Mission',
+      'Volunteers of America'
+    ],
     type: 'select',
   },
 ];

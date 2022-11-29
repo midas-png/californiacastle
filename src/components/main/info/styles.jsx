@@ -3,6 +3,7 @@ import { Title } from 'ui';
 
 export const InfoWrapper = styled.div`
   display: flex;
+  flex-direction: row-reverse;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column-reverse;

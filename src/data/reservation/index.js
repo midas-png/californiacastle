@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 export const RESERVATION_ITEMS = [
   {
     title: 'name',
@@ -38,8 +39,18 @@ export const RESERVATION_ITEMS = [
     type: 'select',
   },
   {
-    title: 'program',
-    options: ['Program 1', 'Promgram 2'],
+    title: 'program (optional)',
+    options: [
+      'None',
+      'DPSS',
+      'Path',
+      "Downtown Women's Center",
+      'Pasadena',
+      'LA LGBT Center',
+      'The People Concern',
+      'LA Mission',
+      'Volunteers of America',
+    ],
     type: 'select',
   },
 ];

@@ -31,7 +31,7 @@ export const Social = () => (
   <SocialWrapper>
     <ContentWrapper>
       <Title variant='h2' secondaryFont>
-        <b>We accept</b> these social programs
+        <b>We accept</b> social programs
       </Title>
       <ProgramsWrapper>
         {PROGRAMS_LOGO.map((logo, index) => (

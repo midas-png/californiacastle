@@ -9,13 +9,13 @@ import { Location } from 'components';
 const LOCATIONS_AVALIABLE = [
   {
     id: 1,
-    category: 'Category',
+    category: 'Shared room, 4 beds',
     title: (
       <Title secondaryFont>
         <b>Cozy housing</b> in Los Angeles
       </Title>
     ),
-    price: 700,
+    price: 600,
     description: `Lorem ipsum dolor sit amet,
       consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -30,7 +30,7 @@ const LOCATIONS_AVALIABLE = [
   {
     id: 2,
     reverse: true,
-    category: 'Category',
+    category: 'Shared room, 2 beds',
     title: (
       <Title secondaryFont>
         <b>Cozy housing</b> in Miami
@@ -40,7 +40,7 @@ const LOCATIONS_AVALIABLE = [
       consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna
       ali lorem ipsum dolor.`,
-    price: 670,
+    price: 750,
     images: [
       Icons.MockHouse1,
       Icons.MockHouse2,
@@ -50,16 +50,38 @@ const LOCATIONS_AVALIABLE = [
   },
   {
     id: 3,
-    category: 'Category',
+    category: 'Shared room, 4 beds',
     title: (
       <Title secondaryFont>
-        <b>Cozy housing</b> in Detroit
+        <b>Cozy housing</b> in Miami
       </Title>
     ),
     description: `Lorem ipsum dolor sit amet,
       consectetur adipisicing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna
       ali lorem ipsum dolor.`,
+    price: 700,
+    images: [
+      Icons.MockHouse1,
+      Icons.MockHouse2,
+      Icons.MockHouse3,
+      Icons.MockHouse4,
+    ],
+  },
+  {
+    id: 4,
+    reverse: true,
+    category: 'Shared room, 2 beds',
+    title: (
+      <Title secondaryFont>
+        <b>Cozy housing</b> in Miami
+      </Title>
+    ),
+    description: `Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna
+      ali lorem ipsum dolor.`,
+    price: 900,
     images: [
       Icons.MockHouse1,
       Icons.MockHouse2,

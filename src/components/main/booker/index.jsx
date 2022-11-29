@@ -39,6 +39,7 @@ export const Booker = () => {
                 key={index}
                 title={title}
                 options={options}
+                defaultOption={sessionStorage.getItem(name || title)}
                 adaptiveStretch={true}
                 onChange={(option) => setValue(name || title, option)}
               />
@@ -51,6 +52,7 @@ export const Booker = () => {
                 title={title}
                 name={name}
                 adaptiveStretch={true}
+                defaultValue={sessionStorage.getItem(name)}
                 placeholder={placeholder}
                 {...register(name)}
               />
