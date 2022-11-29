@@ -1,5 +1,24 @@
 export const BOOKER_ITEMS = [
   {
+    title: 'name',
+    name: 'name',
+    type: 'textfield',
+    placeholder: 'Enter name',
+  },
+  {
+    title: 'email',
+    name: 'email',
+    type: 'textfield',
+    placeholder: 'Enter email',
+  },
+  {
+    title: 'Phone number',
+    name: 'phoneNumber',
+    type: 'textfield',
+    textfieldType: 'number',
+    placeholder: 'Enter phone number',
+  },
+  {
     title: 'check-in',
     name: 'check_in',
     type: 'date',
@@ -16,16 +35,6 @@ export const BOOKER_ITEMS = [
       '6 Months',
       'More than 6 months',
     ],
-    type: 'select',
-  },
-  {
-    title: 'location',
-    options: ['Los Angeles', 'Miami', 'Detroit'],
-    type: 'select',
-  },
-  {
-    title: 'room',
-    options: ['For 4 persons', 'For 2 Persons'],
     type: 'select',
   },
   {

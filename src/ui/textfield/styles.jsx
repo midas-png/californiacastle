@@ -54,6 +54,7 @@ export const TextfieldInput = styled.input.attrs(({ type, placeholder }) => ({
   outline: none;
   font-size: ${({ theme }) => theme.fontSize.tiny};
   color: ${({ theme }) => theme.colors.quaternary};
+  width: 100%;
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.tertiary};

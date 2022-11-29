@@ -14,7 +14,7 @@ export const BookerWrapper = styled.div`
   box-shadow: ${({ theme }) => theme.boxShadow.primary};
   z-index: 2;
 
-  @media screen and (max-width: 815px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
     height: fit-content;
     padding: 30px 0;
@@ -27,7 +27,7 @@ export const LinkScroll = styled(Link)`
   display: flex;
   justify-content: center;
 
-  @media screen and (max-width: 815px) {
+  @media screen and (max-width: 1024px) {
     width: 100%;
   }
 `;

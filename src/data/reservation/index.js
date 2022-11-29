@@ -38,11 +38,6 @@ export const RESERVATION_ITEMS = [
     type: 'select',
   },
   {
-    title: 'room',
-    options: ['For 4 persons', 'For 2 Persons'],
-    type: 'select',
-  },
-  {
     title: 'program',
     options: ['Program 1', 'Promgram 2'],
     type: 'select',
