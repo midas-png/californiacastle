@@ -1,7 +1,27 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const jumpAnimation = keyframes`
+ 0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+`;
 
 export const LoaderWrapper = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+`;
+
+export const LoadingBall = styled.div`
+  background: #121212;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  animation: ${jumpAnimation} 0.6s ${({ duration }) => `${duration}s`} linear
+    infinite;
 `;

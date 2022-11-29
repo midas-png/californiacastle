@@ -34,6 +34,13 @@
         "prettier",
         "import"
     ],
+    "ignorePatterns": [
+        "/src/services/test/api/*.spec.js", 
+        "/src/services/test/model/*.spec.js",
+        "/src/services/src/*.js",
+        "/src/services/src/api/*.js",
+        "/src/services/src/models/*.js"
+    ],
     "rules": {
         "import/no-default-export": "warn",
         "import/order": ["error", {
