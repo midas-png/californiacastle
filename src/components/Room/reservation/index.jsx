@@ -12,7 +12,7 @@ import { bookSchema } from './schema';
 import { Button, Textfield, Select, Datepicker } from 'ui';
 import { RESERVATION_ITEMS } from 'data';
 
-export const Reservation = () => {
+export const Reservation = ({ price }) => {
   const [sessionCheckIn] = useSessionStorage(
     'check_in',
     new Date().toISOString().slice(0, 10),
@@ -85,7 +85,7 @@ export const Reservation = () => {
       )}
       <PriceWrapper>
         <PriceTitle>Price:</PriceTitle>
-        <Price>300$ / month</Price>
+        <Price>{price}$ / month</Price>
       </PriceWrapper>
       <Button
         size='parent'

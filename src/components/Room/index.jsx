@@ -11,11 +11,22 @@ import {
   RoomDataWrapper,
   ImageHeader,
 } from './styles';
+import { Api } from 'services';
 import { Icons } from 'assets';
 
+const { location } = new Api();
+
 export const Room = () => {
-  const [roomData, setRoomData] = useState();
+  const [room, setRoom] = useState({});
   const { id } = useParams();
+
+  useLayoutEffect(() => {
+    location.locationLocationIdGet(id, (error, data, response) => {
+      if (!error) {
+        setRoom(response.body);
+      }
+    });
+  }, []);
 
   return (
     <RoomWrapper>
@@ -24,10 +35,12 @@ export const Room = () => {
       </ImageWrapper>
       <RoomInfoWrapper>
         <RoomDataWrapper>
-          <Title secondaryFont>Cozy housing in Los Angeles</Title>
+          <Title secondaryFont>
+            <b>{room.title}</b>
+          </Title>
           <RoomInfo>
-            <Details />
-            <Reservation />
+            <Details price={room.price} description={room.description} />
+            <Reservation price={room.price} />
           </RoomInfo>
         </RoomDataWrapper>
       </RoomInfoWrapper>
