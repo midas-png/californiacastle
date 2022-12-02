@@ -1,28 +1,26 @@
-# CaliforniaCastleRestApi.HealthCheckApi
+# CaliforniaCastleRestApi.SwaggerApi
 
-All URIs are relative to *http://californiacastleapi.onrender.com/api*
+All URIs are relative to *https://californiacastleapi.onrender.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**rootGet**](HealthCheckApi.md#rootGet) | **GET** / | 
+[**infoGet**](SwaggerApi.md#infoGet) | **GET** /info | 
 
 
 
-## rootGet
+## infoGet
 
-> rootGet()
+> infoGet()
 
 
-
-Simple health check
 
 ### Example
 
 ```javascript
 import CaliforniaCastleRestApi from 'california_castle_rest_api';
 
-let apiInstance = new CaliforniaCastleRestApi.HealthCheckApi();
-apiInstance.rootGet((error, data, response) => {
+let apiInstance = new CaliforniaCastleRestApi.SwaggerApi();
+apiInstance.infoGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {

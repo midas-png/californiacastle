@@ -1,5 +1,6 @@
-import { HealthCheckApi } from 'services/src';
+import { ServerApi, LocationApi } from './src';
 
 export class Api {
-  server = new HealthCheckApi();
+  server = new ServerApi();
+  location = new LocationApi();
 }

@@ -8,6 +8,7 @@ import {
   SwiperWrapper,
   PriceWrapper,
   PricePerMonth,
+  TitleComponent as Title,
 } from './styles';
 import { Button, Swiper } from 'ui';
 
@@ -24,7 +25,13 @@ export const Location = ({
     <LocationWrapper id={`location${id}`} reverse={reverse}>
       <ContentWrapper>
         {category && <ContentCategory>{category}</ContentCategory>}
-        {title && <TitleWrapper>{title}</TitleWrapper>}
+        {title && (
+          <TitleWrapper>
+            <Title secondaryFont>
+              <b>{title}</b>
+            </Title>
+          </TitleWrapper>
+        )}
         {description && <ContentDescription>{description}</ContentDescription>}
         {price && (
           <div>

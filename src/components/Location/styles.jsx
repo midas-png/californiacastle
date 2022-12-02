@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Title } from 'ui';
 
 export const LocationWrapper = styled.div`
   display: flex;
@@ -66,4 +67,10 @@ export const PricePerMonth = styled.span`
   text-transform: uppercase;
   font-size: ${({ theme }) => theme.fontSize.small};
   color: ${({ theme }) => theme.colors.quaternary};
+`;
+
+export const TitleComponent = styled(Title)`
+  font-size: 40px;
+  line-height: 40px;
+  width: 80%;
 `;

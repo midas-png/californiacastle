@@ -15,15 +15,15 @@
 import ApiClient from "../ApiClient";
 
 /**
-* HealthCheck service.
-* @module api/HealthCheckApi
+* Server service.
+* @module api/ServerApi
 * @version 1.0.0
 */
-export default class HealthCheckApi {
+export default class ServerApi {
 
     /**
-    * Constructs a new HealthCheckApi. 
-    * @alias module:api/HealthCheckApi
+    * Constructs a new ServerApi. 
+    * @alias module:api/ServerApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
@@ -35,15 +35,14 @@ export default class HealthCheckApi {
 
     /**
      * Callback function to receive the result of the rootGet operation.
-     * @callback module:api/HealthCheckApi~rootGetCallback
+     * @callback module:api/ServerApi~rootGetCallback
      * @param {String} error Error message, if any.
      * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Simple health check
-     * @param {module:api/HealthCheckApi~rootGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ServerApi~rootGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
     rootGet(callback) {
       let postBody = null;

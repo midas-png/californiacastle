@@ -13,7 +13,11 @@
 
 
 import ApiClient from './ApiClient';
-import HealthCheckApi from './api/HealthCheckApi';
+import LocationLocationIdDeleteRequest from './models/LocationLocationIdDeleteRequest';
+import LocationLocationPostRequest from './models/LocationLocationPostRequest';
+import LocationApi from './api/LocationApi';
+import ServerApi from './api/ServerApi';
+import SwaggerApi from './api/SwaggerApi';
 
 
 /**
@@ -55,8 +59,32 @@ export {
     ApiClient,
 
     /**
-    * The HealthCheckApi service constructor.
-    * @property {module:api/HealthCheckApi}
+     * The LocationLocationIdDeleteRequest model constructor.
+     * @property {module:models/LocationLocationIdDeleteRequest}
+     */
+    LocationLocationIdDeleteRequest,
+
+    /**
+     * The LocationLocationPostRequest model constructor.
+     * @property {module:models/LocationLocationPostRequest}
+     */
+    LocationLocationPostRequest,
+
+    /**
+    * The LocationApi service constructor.
+    * @property {module:api/LocationApi}
     */
-    HealthCheckApi
+    LocationApi,
+
+    /**
+    * The ServerApi service constructor.
+    * @property {module:api/ServerApi}
+    */
+    ServerApi,
+
+    /**
+    * The SwaggerApi service constructor.
+    * @property {module:api/SwaggerApi}
+    */
+    SwaggerApi
 };

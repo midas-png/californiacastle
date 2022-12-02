@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new CaliforniaCastleRestApi.HealthCheckApi();
+    instance = new CaliforniaCastleRestApi.SwaggerApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,11 +47,11 @@
       object[property] = value;
   }
 
-  describe('HealthCheckApi', function() {
-    describe('rootGet', function() {
-      it('should call rootGet successfully', function(done) {
-        //uncomment below and update the code to test rootGet
-        //instance.rootGet(function(error) {
+  describe('SwaggerApi', function() {
+    describe('infoGet', function() {
+      it('should call infoGet successfully', function(done) {
+        //uncomment below and update the code to test infoGet
+        //instance.infoGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -101,7 +101,8 @@ Please follow the [installation](#installation) instruction and execute the foll
 var CaliforniaCastleRestApi = require('california_castle_rest_api');
 
 
-var api = new CaliforniaCastleRestApi.HealthCheckApi()
+var api = new CaliforniaCastleRestApi.LocationApi()
+var id = "id_example"; // {String} 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -109,21 +110,29 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.rootGet(callback);
+api.locationLocationIdDelete(id, callback);
 
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://californiacastleapi.onrender.com/api*
+All URIs are relative to *https://californiacastleapi.onrender.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CaliforniaCastleRestApi.HealthCheckApi* | [**rootGet**](docs/HealthCheckApi.md#rootGet) | **GET** / | 
+*CaliforniaCastleRestApi.LocationApi* | [**locationLocationIdDelete**](docs/LocationApi.md#locationLocationIdDelete) | **DELETE** /location/location/{id} | 
+*CaliforniaCastleRestApi.LocationApi* | [**locationLocationIdGet**](docs/LocationApi.md#locationLocationIdGet) | **GET** /location/location/{id} | 
+*CaliforniaCastleRestApi.LocationApi* | [**locationLocationIdPatch**](docs/LocationApi.md#locationLocationIdPatch) | **PATCH** /location/location/{id} | 
+*CaliforniaCastleRestApi.LocationApi* | [**locationLocationPost**](docs/LocationApi.md#locationLocationPost) | **POST** /location/location | 
+*CaliforniaCastleRestApi.LocationApi* | [**locationLocationsGet**](docs/LocationApi.md#locationLocationsGet) | **GET** /location/locations | 
+*CaliforniaCastleRestApi.ServerApi* | [**rootGet**](docs/ServerApi.md#rootGet) | **GET** / | 
+*CaliforniaCastleRestApi.SwaggerApi* | [**infoGet**](docs/SwaggerApi.md#infoGet) | **GET** /info | 
 
 
 ## Documentation for Models
 
+ - [CaliforniaCastleRestApi.LocationLocationIdDeleteRequest](docs/LocationLocationIdDeleteRequest.md)
+ - [CaliforniaCastleRestApi.LocationLocationPostRequest](docs/LocationLocationPostRequest.md)
 
 
 ## Documentation for Authorization
