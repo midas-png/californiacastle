@@ -39,7 +39,12 @@ export const Room = () => {
             <b>{room.title}</b>
           </Title>
           <RoomInfo>
-            <Details price={room.price} description={room.description} />
+            <Details
+              price={room.price}
+              description={room.description}
+              amenities={room.amenities}
+              location={room.location}
+            />
             <Reservation price={room.price} />
           </RoomInfo>
         </RoomDataWrapper>
