@@ -20,30 +20,42 @@ export const Location = ({
   price,
   description,
   images,
-}) => (
-  <LocationWrapper id={`location${id}`} reverse={reverse}>
-    <ContentWrapper>
-      {category && <ContentCategory>{category}</ContentCategory>}
-      {title && (
-        <TitleWrapper>
-          <Title secondaryFont>
-            <b>{title}</b>
-          </Title>
-        </TitleWrapper>
-      )}
-      {description && <ContentDescription>{description}</ContentDescription>}
-      {price && (
-        <div>
-          <PriceWrapper>${price}</PriceWrapper>
-          <PricePerMonth> / Month</PricePerMonth>
-        </div>
-      )}
-      <Link to={`/room/${id}`}>
-        <Button>Book now</Button>
-      </Link>
-    </ContentWrapper>
-    <SwiperWrapper>
-      <Swiper images={images} />
-    </SwiperWrapper>
-  </LocationWrapper>
-);
+}) => {
+  images = images?.map(
+    (image) => 'https://californiacastleapi.onrender.com/' + image,
+  );
+
+  return (
+    <LocationWrapper id={`location${id}`} reverse={reverse}>
+      <ContentWrapper>
+        {category && <ContentCategory>{category}</ContentCategory>}
+        {title && (
+          <TitleWrapper>
+            <Title secondaryFont>
+              <b>{title}</b>
+            </Title>
+          </TitleWrapper>
+        )}
+        {description && (
+          <ContentDescription>
+            {description.length > 200
+              ? `${description.slice(0, 200)}...`
+              : description}
+          </ContentDescription>
+        )}
+        {price && (
+          <div>
+            <PriceWrapper>${price}</PriceWrapper>
+            <PricePerMonth> / Month</PricePerMonth>
+          </div>
+        )}
+        <Link to={`/room/${id}`}>
+          <Button>Book now</Button>
+        </Link>
+      </ContentWrapper>
+      <SwiperWrapper>
+        <Swiper images={images} />
+      </SwiperWrapper>
+    </LocationWrapper>
+  );
+};

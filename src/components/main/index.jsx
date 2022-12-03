@@ -4,17 +4,9 @@ import { Hero } from './hero';
 import { Info } from './info';
 import { Social } from './social';
 import { Api } from 'services';
-import { Icons } from 'assets';
 import { Location } from 'components';
 
 const { location } = new Api();
-
-const images = [
-  Icons.MockHouse1,
-  Icons.MockHouse2,
-  Icons.MockHouse3,
-  Icons.MockHouse4,
-];
 
 export const Main = () => {
   const [locations, setLocations] = useState([]);
@@ -40,7 +32,7 @@ export const Main = () => {
           title={location.title}
           price={location.price}
           description={location.description}
-          images={images}
+          images={location.images}
         />
       ))}
       <Info />
