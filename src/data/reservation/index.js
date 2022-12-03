@@ -4,20 +4,20 @@ export const RESERVATION_ITEMS = [
     title: 'name',
     name: 'name',
     type: 'textfield',
-    placeholder: 'Enter name',
+    placeholder: 'Name',
   },
   {
     title: 'email',
     name: 'email',
     type: 'textfield',
-    placeholder: 'Enter email',
+    placeholder: 'example@mail.com',
   },
   {
     title: 'Phone number',
     name: 'phoneNumber',
     type: 'textfield',
     textfieldType: 'number',
-    placeholder: 'Enter phone number',
+    placeholder: 'Phone number',
   },
   {
     title: 'check-in',
