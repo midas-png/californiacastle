@@ -48,17 +48,17 @@ export const Navbar = () => {
               California Castle
             </NavigationLogo>
           </Link>
-          {NAVIGATION_ITEMS.map(({ linkTo, label }, index) => (
+          {/* {NAVIGATION_ITEMS.map(({ linkTo, label }, index) => (
             <Link to={linkTo} key={index}>
               <NavigationItem $top={navbarOnTop}>{label}</NavigationItem>
             </Link>
-          ))}
+          ))} */}
         </NavigationWrapper>
-        <MenuWrapper>
+        {/* <MenuWrapper>
           <BurgerMenu $top={navbarOnTop} onClick={() => setSidebarOpen(true)} />
-        </MenuWrapper>
+        </MenuWrapper> */}
       </NavbarWrapper>
-      <Sidebar isActive={sidebarOpen} setIsActive={setSidebarOpen} />
+      {/* <Sidebar isActive={sidebarOpen} setIsActive={setSidebarOpen} /> */}
     </>
   );
 };

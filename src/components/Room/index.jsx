@@ -44,6 +44,7 @@ export const Room = () => {
               description={room.description}
               amenities={room.amenities}
               location={room.location}
+              images={room.images}
             />
             <Reservation price={room.price} />
           </RoomInfo>

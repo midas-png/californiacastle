@@ -12,14 +12,17 @@ import {
 import { Swiper, Title } from 'ui';
 import { Icons } from 'assets';
 
-const images = [
-  Icons.MockHouse1,
-  Icons.MockHouse2,
-  Icons.MockHouse3,
-  Icons.MockHouse4,
-];
+export const Details = ({
+  price,
+  description,
+  amenities,
+  location,
+  images,
+}) => {
+  images = images?.map(
+    (image) => 'https://californiacastleapi.onrender.com/' + image,
+  );
 
-export const Details = ({ price, description, amenities, location }) => {
   return (
     <DetailsWrapper>
       <SwiperWrapper>
