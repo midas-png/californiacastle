@@ -62,8 +62,11 @@ class LocationLocationPostRequest {
             if (data.hasOwnProperty('price')) {
                 obj['price'] = ApiClient.convertToType(data['price'], Object);
             }
-            if (data.hasOwnProperty('images')) {
-                obj['images'] = ApiClient.convertToType(data['images'], Object);
+            if (data.hasOwnProperty('amenities')) {
+                obj['amenities'] = ApiClient.convertToType(data['amenities'], Object);
+            }
+            if (data.hasOwnProperty('location')) {
+                obj['location'] = ApiClient.convertToType(data['location'], Object);
             }
         }
         return obj;
@@ -110,9 +113,14 @@ LocationLocationPostRequest.prototype['description'] = undefined;
 LocationLocationPostRequest.prototype['price'] = undefined;
 
 /**
- * @member {Object} images
+ * @member {Object} amenities
  */
-LocationLocationPostRequest.prototype['images'] = undefined;
+LocationLocationPostRequest.prototype['amenities'] = undefined;
+
+/**
+ * @member {Object} location
+ */
+LocationLocationPostRequest.prototype['location'] = undefined;
 
 
 

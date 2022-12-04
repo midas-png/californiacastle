@@ -151,6 +151,8 @@ No authorization required
 
 
 
+!IMPORTANT! Use this request locally ONLY with Postman, not on production swagger! Or the server will be down and you have to do manual deploy
+
 ### Example
 
 ```javascript

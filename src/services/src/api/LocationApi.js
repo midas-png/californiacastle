@@ -167,6 +167,7 @@ export default class LocationApi {
      */
 
     /**
+     * !IMPORTANT! Use this request locally ONLY with Postman, not on production swagger! Or the server will be down and you have to do manual deploy
      * @param {Object} opts Optional parameters
      * @param {module:models/LocationLocationPostRequest} opts.body 
      * @param {module:api/LocationApi~locationLocationPostCallback} callback The callback function, accepting three arguments: error, data, response

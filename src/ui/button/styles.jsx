@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { LoadingOutlined } from '@ant-design/icons';
 
 const sizeMap = {
   parent: css`
@@ -38,7 +39,7 @@ export const ButtonComponent = styled.button`
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  &:active {
+  &:active:enabled {
     transform: scale(0.94);
   }
 
@@ -52,4 +53,16 @@ export const ButtonComponent = styled.button`
 
   ${({ size = 'primary' }) => sizeMap[size]};
   ${({ type = 'primary' }) => colorTypeMap[type]};
+
+  &:disabled {
+    background: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.secondary};
+    border: 1px solid ${(props) => props.theme.colors.secondary};
+    cursor: default;
+  }
+`;
+
+export const LoaderIcon = styled(LoadingOutlined)`
+  font-size: ${(props) => props.theme.fontSize.medium};
+  color: ${(props) => props.theme.colors.secondary};
 `;

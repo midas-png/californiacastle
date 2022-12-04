@@ -15,6 +15,7 @@
 import ApiClient from './ApiClient';
 import LocationLocationIdDeleteRequest from './models/LocationLocationIdDeleteRequest';
 import LocationLocationPostRequest from './models/LocationLocationPostRequest';
+import AppointmentApi from './api/AppointmentApi';
 import LocationApi from './api/LocationApi';
 import ServerApi from './api/ServerApi';
 import SwaggerApi from './api/SwaggerApi';
@@ -69,6 +70,12 @@ export {
      * @property {module:models/LocationLocationPostRequest}
      */
     LocationLocationPostRequest,
+
+    /**
+    * The AppointmentApi service constructor.
+    * @property {module:api/AppointmentApi}
+    */
+    AppointmentApi,
 
     /**
     * The LocationApi service constructor.

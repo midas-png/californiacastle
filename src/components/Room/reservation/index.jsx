@@ -1,4 +1,4 @@
-import { useSessionStorage } from 'domain';
+import { useToggle, useSessionStorage } from 'domain';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import {
@@ -11,6 +11,9 @@ import {
 import { bookSchema } from './schema';
 import { Button, Textfield, Select, Datepicker } from 'ui';
 import { RESERVATION_ITEMS } from 'data';
+import { Api } from 'services';
+
+const { appointment } = new Api();
 
 export const Reservation = ({ price }) => {
   const [sessionCheckIn] = useSessionStorage(
@@ -37,6 +40,14 @@ export const Reservation = ({ price }) => {
     },
     resolver: yupResolver(bookSchema),
   });
+  const [loading, toggleLoading] = useToggle();
+
+  const handleBook = (data) => {
+    toggleLoading();
+    appointment.appointmentSchedulePost((error, data, response) => {
+      toggleLoading();
+    });
+  };
 
   return (
     <ReservationWrapper>
@@ -89,7 +100,8 @@ export const Reservation = ({ price }) => {
       </PriceWrapper>
       <Button
         size='parent'
-        onClick={handleSubmit((data) => console.log('booked!'))}>
+        loading={loading}
+        onClick={handleSubmit((data) => handleBook(data))}>
         Book
       </Button>
     </ReservationWrapper>

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **title** | **Object** |  | [optional] 
 **description** | **Object** |  | [optional] 
 **price** | **Object** |  | [optional] 
-**images** | **Object** |  | [optional] 
+**amenities** | **Object** |  | [optional] 
+**location** | **Object** |  | [optional] 
 
 

@@ -62,6 +62,12 @@ class LocationLocationIdDeleteRequest {
             if (data.hasOwnProperty('images')) {
                 obj['images'] = ApiClient.convertToType(data['images'], Object);
             }
+            if (data.hasOwnProperty('amenities')) {
+                obj['amenities'] = ApiClient.convertToType(data['amenities'], Object);
+            }
+            if (data.hasOwnProperty('location')) {
+                obj['location'] = ApiClient.convertToType(data['location'], Object);
+            }
         }
         return obj;
     }
@@ -105,6 +111,16 @@ LocationLocationIdDeleteRequest.prototype['price'] = undefined;
  * @member {Object} images
  */
 LocationLocationIdDeleteRequest.prototype['images'] = undefined;
+
+/**
+ * @member {Object} amenities
+ */
+LocationLocationIdDeleteRequest.prototype['amenities'] = undefined;
+
+/**
+ * @member {Object} location
+ */
+LocationLocationIdDeleteRequest.prototype['location'] = undefined;
 
 
 

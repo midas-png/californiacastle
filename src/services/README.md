@@ -101,8 +101,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 var CaliforniaCastleRestApi = require('california_castle_rest_api');
 
 
-var api = new CaliforniaCastleRestApi.LocationApi()
-var id = "id_example"; // {String} 
+var api = new CaliforniaCastleRestApi.AppointmentApi()
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -110,7 +109,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.locationLocationIdDelete(id, callback);
+api.appointmentSchedulePost(callback);
 
 ```
 
@@ -120,6 +119,7 @@ All URIs are relative to *https://californiacastleapi.onrender.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CaliforniaCastleRestApi.AppointmentApi* | [**appointmentSchedulePost**](docs/AppointmentApi.md#appointmentSchedulePost) | **POST** /appointment/schedule | 
 *CaliforniaCastleRestApi.LocationApi* | [**locationLocationIdDelete**](docs/LocationApi.md#locationLocationIdDelete) | **DELETE** /location/location/{id} | 
 *CaliforniaCastleRestApi.LocationApi* | [**locationLocationIdGet**](docs/LocationApi.md#locationLocationIdGet) | **GET** /location/location/{id} | 
 *CaliforniaCastleRestApi.LocationApi* | [**locationLocationIdPatch**](docs/LocationApi.md#locationLocationIdPatch) | **PATCH** /location/location/{id} | 

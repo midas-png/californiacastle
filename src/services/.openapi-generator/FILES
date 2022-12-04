@@ -1,8 +1,8 @@
 .babelrc
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
+docs/AppointmentApi.md
 docs/LocationApi.md
 docs/LocationLocationIdDeleteRequest.md
 docs/LocationLocationPostRequest.md
@@ -12,14 +12,11 @@ git_push.sh
 mocha.opts
 package.json
 src/ApiClient.js
+src/api/AppointmentApi.js
 src/api/LocationApi.js
 src/api/ServerApi.js
 src/api/SwaggerApi.js
 src/index.js
 src/models/LocationLocationIdDeleteRequest.js
 src/models/LocationLocationPostRequest.js
-test/api/LocationApi.spec.js
-test/api/ServerApi.spec.js
-test/api/SwaggerApi.spec.js
-test/model/LocationLocationIdDeleteRequest.spec.js
-test/model/LocationLocationPostRequest.spec.js
+test/api/AppointmentApi.spec.js
