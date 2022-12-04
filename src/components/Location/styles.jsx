@@ -19,6 +19,7 @@ export const ContentWrapper = styled.div`
   gap: 30px;
   background: ${({ theme }) => theme.colors.primary};
   width: 42%;
+  padding: 130px 0;
 
   @media screen and (max-width: 1024px) {
     width: 100%;
