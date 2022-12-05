@@ -25,3 +25,8 @@ export const LoadingBall = styled.div`
   animation: ${jumpAnimation} 0.6s ${({ duration }) => `${duration}s`} linear
     infinite;
 `;
+
+export const ErrorMessage = styled.span`
+  position: absolute;
+  margin-top: 120px;
+`;
