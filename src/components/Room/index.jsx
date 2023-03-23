@@ -26,7 +26,7 @@ export const Room = () => {
         setRoom(response.body);
       }
     });
-  }, []);
+  }, [id]);
 
   return (
     <RoomWrapper>

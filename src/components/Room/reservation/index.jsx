@@ -100,7 +100,7 @@ export const Reservation = ({ price }) => {
       </PriceWrapper>
       <Button
         size='parent'
-        loading={loading}
+        loading={loading ? 1 : 0}
         onClick={handleSubmit((data) => handleBook(data))}>
         Book
       </Button>

@@ -85,3 +85,41 @@ export const ButtonWrapper = styled(Link)`
     display: none;
   }
 `;
+
+export const OptionalDropdownWrapper = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transform: scaleY(0);
+  transform-origin: top;
+  width: 200px;
+  background: ${({ theme }) => theme.colors.primary};
+  transition: all 0.2s ease-in-out;
+  padding: 20px;
+`;
+
+export const OptionLink = styled(Link)`
+  display: none;
+  font-size: ${({ theme }) => theme.fontSize.small};
+  color: ${({ theme }) => theme.colors.secondary};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.secondary};
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.tertiary};
+    padding-bottom: 10px;
+  }
+`;
+
+export const OptionsLinkWrapper = styled.div`
+  &:hover ${OptionalDropdownWrapper} {
+    transform: scaleY(1);
+  }
+
+  &:hover ${OptionLink} {
+    display: block;
+  }
+`;
