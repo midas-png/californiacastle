@@ -42,7 +42,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "swagger": "npx @openapitools/openapi-generator-cli generate -i https://californiacastleapi.onrender.com/api/info -g javascript -o ./src/services --additional-properties=useSingleRequestParameter=true,withSeparateModelsAndApi=true,modelPackage=models,apiPackage=api"
+    "swagger": "npx @openapitools/openapi-generator-cli generate -i https://app-a68dd003-3669-4133-8619-984a58c91d85.cleverapps.io/api/info -g javascript -o ./src/services --additional-properties=useSingleRequestParameter=true,withSeparateModelsAndApi=true,modelPackage=models,apiPackage=api"
   },
   "eslintConfig": {
     "extends": [
