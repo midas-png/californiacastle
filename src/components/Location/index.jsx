@@ -22,7 +22,8 @@ export const Location = ({
   images,
 }) => {
   images = images?.map(
-    (image) => 'https://californiacastleapi.onrender.com/' + image,
+    (image) =>
+      'https://app-a68dd003-3669-4133-8619-984a58c91d85.cleverapps.io/' + image,
   );
 
   return (
